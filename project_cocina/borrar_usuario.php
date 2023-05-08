@@ -1,3 +1,9 @@
+<?php 
+   session_start(); 
+   $us=$_SESSION["usuario"]; 
+   if ($us==""){ 
+       header("Location: index.html"); } 
+?>
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
@@ -9,12 +15,6 @@
     <title>Document</title> 
 </head>
 <body> 
-    <?php 
-        session_start(); 
-        $us=$_SESSION["usuario"]; 
-        if ($us==""){ 
-            header("Location: index.html"); } 
-    ?> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
     <div class="container-fluid"> 
         <a class="navbar-brand" href="index.html">KITCHEN</a> 
